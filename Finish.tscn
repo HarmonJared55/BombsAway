@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Finish.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 47.4344, 47.6588 )
+
+[node name="Finish" type="Area2D"]
+position = Vector2( 208.051, -559.802 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="body_entered" from="." to="." method="_on_Finish_body_entered"]
