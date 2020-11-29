@@ -60,9 +60,11 @@ func pass_player():
 func take_damage():
 	health -= 10
 	$Healthbar.value = health
+	if(health <= 0):
+		get_tree().reload_current_scene()
 	
 
 
 func _on_Timer_timeout():
-	pass # Replace with function body.
+	get_tree().reload_current_scene()
 

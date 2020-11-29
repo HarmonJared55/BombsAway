@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/start.png" type="Texture" id=1]
+[ext_resource path="res://start.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 24.0
+margin_top = 32.0
+margin_right = 600.0
+margin_bottom = 232.0
+text = "The Goal of this game is to get the key and make your way to the exit. In your way is a lot of boxes and you have a bunch of bombs. You have 60 seconds to complete the level or you lose. 
+
+CONTROLS
+Arrow Keys - Movment
+Left Click - Throw Bomb
+
+TIPS - Bombs hurt, dont stand near them| Boxes break and throw debries everywhere.
+
+GOOD luck and BOMBS AWAY"
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 40.0
+margin_top = 200.0
+margin_right = 80.0
+margin_bottom = 240.0
+texture_over = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="TextureProgress" to="TextureProgress" method="_on_TextureProgress_mouse_entered"]
+[connection signal="mouse_exited" from="TextureProgress" to="TextureProgress" method="_on_TextureProgress_mouse_exited"]

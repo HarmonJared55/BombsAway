@@ -13,7 +13,5 @@ func _ready():
 
 
 func _on_Finish_body_entered(body):
-	print("hi")
-	#var l = l2.instance()
-	#get_parent().get_parent().add_child(l)
-	#get_parent().get_parent().remove_child(get_parent())
+	if(body == player && player.has_key):
+		get_tree().change_scene("res://Level3.tscn")
